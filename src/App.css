@@ -1,0 +1,56 @@
+main {
+  background-position: center;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  inset: 0;
+  background-color: aquamarine;
+}
+
+/* Taskbar */
+nav {
+  bottom: 0;
+  contain: size layout;
+  height: 48px;
+  background-color: aqua;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+/* Start Button */
+nav > button {
+  display: flex;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+nav > button > svg {
+  height: 48px;
+  width: 48px;
+}
+
+nav > button:hover {
+  background-color: rgb(90, 90, 122);
+}
+
+/* Opened Programs */
+nav > div {
+}
+
+/* Clock */
+#clock {
+  display: flex;
+  height: 100%;
+  width: 76px;
+  position: absolute;
+  letter-spacing: -0.1px;
+  right: 0;
+  bottom: 0;
+  place-content: center;
+  place-items: center;
+}
