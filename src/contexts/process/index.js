@@ -1,16 +1,14 @@
-import { createContext, useContext } from "react";
+import contextFactory from "contexts/contextFactory";
+import { initialProcessContextState } from "contexts/process/process";
+import { useProcessContextState } from "./useProcessContextState";
 
-// export default function () {
-//   const processContext = createContext();
-//   const processProvider = ({ children }) => {
-//     <processContext.Provider value={useContextState()}>
-//       {children}
-//     </processContext.Provider>;
-//   };
+const { Consumer, Provider } = contextFactory(
+  initialProcessContextState,
+  useProcessContextState
+);
 
-//   return {
-//     Consumer: processContext.Consumer,
-//     Provider: this.ProcessProvider,
-//     useContext: () => useContext(processContext),
-//   };
-// }
+export {
+  Consumer as ProcessConsumer,
+  Provider as ProcessProvider,
+  //   useContext as useProcesses,
+};

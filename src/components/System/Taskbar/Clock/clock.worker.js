@@ -1,4 +1,4 @@
-import { formatLocaleDateTime } from "components/Taskbar/Clock/formatLocaleDateTime";
+import { formatLocaleDateTime } from "components/System/Taskbar/Clock/formatLocaleDateTime";
 
 const MILLISECONDS_IN_SECOND = 1000;
 

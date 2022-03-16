@@ -1,8 +1,9 @@
 import "./App.css";
-import processContext from "contexts/process/index";
+import { ProcessProvider, ProcessConsumer } from "contexts/process/index";
 
 /** Components */
-import Clock from "components/Taskbar/Clock/index";
+import Clock from "components/System/Taskbar/Clock/index";
+import ProcessLoader from "components/System/ProcessLoader";
 
 function App() {
   function startMenu() {
@@ -10,7 +11,8 @@ function App() {
   }
 
   return (
-    <>
+    <ProcessProvider>
+      <ProcessLoader />
       <main></main>
       <nav>
         <button onClick={() => startMenu()}>
@@ -23,7 +25,7 @@ function App() {
           <Clock />
         </div>
       </nav>
-    </>
+    </ProcessProvider>
   );
 }
 

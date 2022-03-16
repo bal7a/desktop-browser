@@ -6,7 +6,7 @@ const Clock = () => {
 
   const clockWorkerInit = useCallback(() => {
     return new Worker(
-      new URL("components/Taskbar/Clock/clock.worker", import.meta.url),
+      new URL("components/System/Taskbar/Clock/clock.worker", import.meta.url),
       { name: "Clock" }
     );
   }, []);
